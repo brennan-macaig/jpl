@@ -1,0 +1,14 @@
+name: jpl
+arch: amd64
+platform: linux
+version: ${VERSION}
+maintainer: Brennan Macaig <bmacaig@mutualink.net>
+description: Build software with rocket speed
+vendor: Brennan Macaig
+homepage: https://brennanmacaig.com
+contents:
+  - src: build/jpl
+    dst: /usr/local/bin/jpl
+    file_info:
+      mode: 0644
+      owner: root

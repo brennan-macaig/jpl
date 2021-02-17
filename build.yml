@@ -1,0 +1,28 @@
+# build.yml
+# JPL Build Configuration file
+bfversion: "1.0"
+
+# Configuration Settings
+config:
+  passOSEnv: false
+
+# Variables
+variables:
+  VERSION: "banana"
+  OTHERVAR: "blahblah"
+
+# Tasks
+build:
+  - module: execute
+    commands:
+      - echo {{.VERSION}}
+
+  - module: copy
+    src:
+      - .gitignore
+    dest: .test
+
+test:
+  - module: execute
+    commands:
+      - echo Test Command

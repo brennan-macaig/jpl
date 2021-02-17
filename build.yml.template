@@ -1,0 +1,23 @@
+# build.yml
+# JPL Build Configuration file
+version: 1.0
+
+# Configuration Settings
+config:
+  passOSEnv: false
+
+# Variables
+variables:
+  VERSION: 1.0.0
+
+# Tasks
+build:
+  - module: exec
+    commands:
+      - go build -o build/jpl cmd/jpl/main.go
+
+test:
+  - module: exec
+    commands:
+      - echo Test
+      - go vet ./...
